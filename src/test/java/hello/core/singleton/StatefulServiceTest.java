@@ -24,11 +24,11 @@ class StatefulServiceTest {
         //코드 수정 후 Thread B : B사용자 20000원 주문
         int userBPrice= statefulService2.order("userB",20000);
 
-        //Thread A : A사용자 주문 금액 조회
-//        int price = statefulService1.getPrice();
+     /*   //Thread A : A사용자 주문 금액 조회
+        int price = statefulService1.getPrice();*/
         System.out.println("price = " + userAPrice);
 
-//        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
+        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
     }
 
     static class TestConfig {

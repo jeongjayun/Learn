@@ -33,8 +33,8 @@ import org.springframework.context.annotation.FilterType;
 //Component + Autowired 까지 함께 씀
 
 public class AutoAppConfig {
-    @Bean(name = "memoryMemberRepository")
+    /*@Bean(name = "memoryMemberRepository")
     public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
-    }
+    }*/
 }

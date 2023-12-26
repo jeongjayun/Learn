@@ -15,15 +15,15 @@ public class StatefulService {
      * !!스프링은 항상 무상태로 설계해야 한다!!
      *  */
 
-    /*private int price; // 상태를 유지하는 필드, 사용자A가 10000 넣고 금액 확인하려는 사이 사용자 B가 20000을 넣음 -> 그럼 최종 20000이 반환되면서 서비스 꼬임...*/
+    private int price; // 상태를 유지하는 필드, 사용자A가 10000 넣고 금액 확인하려는 사이 사용자 B가 20000을 넣음 -> 그럼 최종 20000이 반환되면서 서비스 꼬임...
 
     public int order(String name, int price) {
         System.out.println("name = " + name + " , price = " + price);
-//        this.price = price;
+        this.price = price;
         return price;
     }
 
-//    public int getPrice() {
-//        return price;
-//    }
+    public int getPrice() {
+        return price;
+    }
 }
